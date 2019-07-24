@@ -15,5 +15,7 @@ class Song < ActiveRecord::Base
     # else
     #   self.artist = Artist.create(name: "Drake")
     # end
+    
+    self.update(artist: Artist.find_or_create_by(name: "Drake"))
   end
 end
